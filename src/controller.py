@@ -54,6 +54,7 @@ class Controller:
             if(fights):
                 for e in fights:
                     if(self.hero.fight(e)):
+                        self.hero.speed += 1
                         e.kill()
                         self.background.fill((250, 250, 250))
                     else:
