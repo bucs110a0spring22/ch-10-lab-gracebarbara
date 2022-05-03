@@ -1,5 +1,6 @@
 import pygame
 import random
+from src import hero
 #model
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, name, x, y, img_file):
@@ -21,7 +22,8 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = 2
 
     def update(self):
+			
 			#randomly generates x and y coordinate for enemy rect object
-			   self.rect.x = random.randrange(-1,2)
-			   self.rect.y = random.randrange(-1,2)
+			   self.rect.x += random.randint(-1,1)
+			   self.rect.y += random.randint(-1,1)
 			#print("'Update me,' says " + self.name)
