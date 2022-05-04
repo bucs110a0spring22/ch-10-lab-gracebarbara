@@ -1,6 +1,5 @@
 import pygame
 import random
-from src import hero
 #model
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, name, x, y, img_file):
